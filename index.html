@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ScoutGredient</title>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -22,9 +22,45 @@
 
 <body>
 
+    <div class="container">
+        <div class="meal-wrapper">
+            <div class="meal-search">
 
+                <h2 class="title">Find Meals for your Ingredients</h2>
 
-    <script src="app.js"></script>
+                <p>
+                    <q>Real food doesn't have ingredients, real food is ingredients.</q> <br>
+                    <cite>- Jamie Oliver</cite>
+                </p>
+            </div>
+
+            <div class="meal-search-box">
+                <input type="text" id="search-input" class="search-text" placeholder="Enter an Ingredient">
+                <button id="search-button" class="btn btn-search"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="meal-results">
+                <h2 class="title">Your Search Results</h2>
+
+                <div class="meal">
+                    <div class="meal-item">
+                        <div class="meal-img">
+                            <img src="food.jpg" alt="Food Item">
+                        </div>
+
+                        <div class="meal-name">
+                            Potato Chips
+                        </div>
+
+                        <div class="meal-recipe">
+                            <a href="#" id="recipe-button" class="btn-recipe">Get Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="app.js"></script>
 </body>
 
 </html>
