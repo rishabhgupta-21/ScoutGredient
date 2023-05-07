@@ -1,0 +1,118 @@
+/* General Styling */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --tenne-tawny: #d65108;
+    --tenne-tawny-dark: #b54507;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.75;
+    padding: 1rem;
+}
+
+.btn {
+    font-family: inherit;
+    cursor: pointer;
+    outline: 0;
+    font-size: 1.1rem;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    color: rgba(0, 0, 0, 0.75);
+}
+
+/* Styling the main content */
+.container {
+    min-height: 100vh;
+}
+
+/* .meal-wrapper,
+.meal-search-box{
+    min-width: ;
+} */
+
+.meal-wrapper {
+    /* Sceptical */
+    /* max-width: 1280px; */
+    /* border: 1px solid black; */
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.meal-search {
+    margin: 2rem 0 0.5rem;
+}
+
+.meal-search cite {
+    font-size: 1rem;
+}
+
+.meal-search-box {
+    margin: 1.5rem;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.search-text,
+.btn-search {
+    width: min(100%, 30rem);
+}
+
+.search-text {
+    padding: 0 1rem;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    font-size: 1.1rem;
+    font-family: inherit;
+    border: 1.5px solid rgb(0, 0, 0, 0.4);
+    color: var(--tenne-tawny);
+    outline: 0;
+}
+
+.search-text:focus::placeholder {
+    color: var(--tenne-tawny);
+}
+
+.search-text:focus {
+    /* border: 3px solid rgb(0, 0, 0, 0.2); */
+    border: 2px solid var(--tenne-tawny);
+    border-right: inherit;
+}
+
+.btn-search {
+    width: 4rem;
+    height: 3rem;
+    font-size: 1.3rem;
+    background-color: var(--tenne-tawny);
+    color: white;
+    border: none;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+
+    transition: background-color 0.15s linear;
+}
+
+.btn-search:hover {
+    background-color: var(--tenne-tawny-dark);
+}
+
+.btn-search:active {
+    color: #000;
+}
