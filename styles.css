@@ -18,6 +18,10 @@ body {
     font-size: 1.1rem;
     line-height: 1.75;
     padding: 1rem;
+
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
 }
 
 .btn {
@@ -82,18 +86,17 @@ body {
     font-size: 1.1rem;
     font-family: inherit;
     border: 1.5px solid rgb(0, 0, 0, 0.4);
-    color: var(--tenne-tawny);
+    color: black;
     outline: 0;
-}
-
-.search-text:focus::placeholder {
-    color: var(--tenne-tawny);
 }
 
 .search-text:focus {
     /* border: 3px solid rgb(0, 0, 0, 0.2); */
     border: 2px solid var(--tenne-tawny);
-    border-right: inherit;
+}
+
+.search-text:focus::placeholder {
+    color: black;
 }
 
 .btn-search {
@@ -115,4 +118,65 @@ body {
 
 .btn-search:active {
     color: #000;
+}
+
+/* Try to give border on .search-text when .btn-search is active */
+
+.meal-results {
+    margin-top: 4rem;
+    /* width: min(95%, 100rem); */
+}
+
+.meal {
+    margin: 2rem 0;
+}
+
+.meal-item {
+    border-radius: 1rem;
+    width: 24rem;
+    height: 32rem;
+    overflow: hidden;
+    box-shadow: 0 0 1.5rem -0.25rem rgba(0, 0, 0, 0.4);
+}
+
+.meal-img img {
+    display: block;
+    width: 100%;
+    height: 23rem;
+}
+
+.meal-name {
+    margin: 0.9rem auto;
+    font-size: 1.3rem;
+}
+
+.meal-recipe {
+    margin: 1.3rem auto;
+}
+
+.btn-recipe {
+    text-decoration: none;
+    padding: 0.5em 2rem;
+    border-radius: 1.2rem;
+    color: white;
+    background-color: var(--tenne-tawny);
+    font-size: 1.05rem;
+    font-weight: 500;
+
+    transition: background-color 0.15s linear, color 0.1s linear;
+}
+
+.btn-recipe:hover {
+    background-color: var(--tenne-tawny-dark);
+}
+
+.btn-recipe:active {
+    color: #000;
+}
+
+.grid-container {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+    /* border: 1px solid black; */
 }
