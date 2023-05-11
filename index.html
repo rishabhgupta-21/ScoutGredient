@@ -25,7 +25,7 @@
     <div class="container">
         <div class="meal-wrapper">
             <!-- Introduction -->
-            <div class="meal-search">
+            <div class="introduction">
                 <h2 class="title">Find Meals for your Ingredients</h2>
                 <p class="subtitle">
                     <q>Real food doesn't have ingredients, real food is ingredients.</q>
@@ -35,7 +35,7 @@
             </div>
 
             <!-- Search Meal Area -->
-            <div class="meal-search-box flex">
+            <div class="meal-search flex">
                 <input type="text" id="search-input" class="search-text" placeholder="Enter an Ingredient">
                 <button id="search-button" class="btn btn-search"><i class="fas fa-search"></i></button>
             </div>
@@ -61,7 +61,7 @@
                         </div>
                     </div>
 
-                    <div class="meal-item grid-item">
+                    <!-- <div class="meal-item grid-item">
                         <div class="meal-img">
                             <img src="food.jpg" alt="Food Item">
                         </div>
@@ -72,91 +72,50 @@
 
                         <div class="meal-recipe">
                             <a href="#" id="recipe-button" class="btn-recipe">Get Recipe</a>
-                        </div>
-                    </div>
-
-                    <div class="meal-item grid-item">
-                        <div class="meal-img">
-                            <img src="food.jpg" alt="Food Item">
-                        </div>
-
-                        <div class="meal-name">
-                            <h3>Potato Chips</h3>
-                        </div>
-
-                        <div class="meal-recipe">
-                            <a href="#" id="recipe-button" class="btn-recipe">Get Recipe</a>
-                        </div>
-                    </div>
-
-                    <div class="meal-item grid-item">
-                        <div class="meal-img">
-                            <img src="food.jpg" alt="Food Item">
-                        </div>
-
-                        <div class="meal-name">
-                            <h3>Potato Chips</h3>
-                        </div>
-
-                        <div class="meal-recipe">
-                            <a href="#" id="recipe-button" class="btn-recipe">Get Recipe</a>
-                        </div>
-                    </div>
-
-                    <div class="meal-item grid-item">
-                        <div class="meal-img">
-                            <img src="food.jpg" alt="Food Item">
-                        </div>
-
-                        <div class="meal-name">
-                            <h3>Potato Chips</h3>
-                        </div>
-
-                        <div class="meal-recipe">
-                            <a href="#" id="recipe-button" class="btn-recipe">Get Recipe</a>
-                        </div>
-                    </div>
+                        </div> -->
                 </div>
             </div>
-
-            <!-- Modal -->
-            <dialog class="meal-details modal" id="modal">
-
-                <div class="recipe-title-close-btn-container flex modal-grid">
-                    <h2 class="recipe-title">Potato Chips</h2>
-
-                    <button id="close-modal-button" class="btn btn-close-modal">
-                        <i class="fas fa-times fa-l"></i>
-                    </button>
-                </div>
-
-                <p class="recipe-category">
-                    Potato
-                </p>
-
-                <div class="recipe-instructions">
-                    <h3>Instructions</h3>
-
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, dolorem ratione doloremque
-                        assumenda vitae quasi repellendus, odit libero aperiam molestias omnis fugit consequatur
-                        nemo
-                        provident. Iure odio optio eaque. Omnis.
-                    </p>
-                </div>
-
-                <div class="recipe-img">
-                    <img src="food.jpg" alt="">
-                </div>
-
-                <a href="#" target="_blank" class="recipe-link">
-                    Watch Video
-                </a>
-            </dialog>
-
         </div>
+
+        <!-- Modal -->
+        <dialog class="meal-details modal" id="modal">
+
+            <div class="recipe-title-close-btn-container flex modal-grid">
+                <h2 class="recipe-title">Potato Chips</h2>
+
+                <button id="close-modal-button" class="btn btn-close-modal">
+                    <i class="fas fa-times fa-xl"></i>
+                </button>
+            </div>
+
+            <p class="recipe-category">
+                Potato
+            </p>
+
+            <div class="recipe-instructions">
+                <h3>Instructions</h3>
+
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, dolorem ratione doloremque
+                    assumenda vitae quasi repellendus, odit libero aperiam molestias omnis fugit consequatur
+                    nemo
+                    provident. Iure odio optio eaque. Omnis.
+                </p>
+            </div>
+
+            <div class="recipe-img">
+                <img src="food.jpg" alt="">
+            </div>
+
+            <a href="#" target="_blank" class="recipe-link">
+                Watch Video
+            </a>
+        </dialog>
+    </div>
+    </div>
     </div>
 
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <script src="app.js"></script>
 </body>
 
