@@ -41,38 +41,13 @@
             </div>
 
             <!-- Meal Results  -->
-            <div class="meal-results">
+            <div id="meal-results" class="meal-results">
                 <!-- Results Title -->
-                <h2 class="title">Meals for you!</h2>
+                <h2 id="meal-results-title" class="title hide">Meals for you!</h2>
 
                 <!-- GRID with grid items -->
                 <div class="meal grid-container">
-                    <div class="meal-item grid-item">
-                        <div class="meal-img">
-                            <img src="food.jpg" alt="Food Item">
-                        </div>
 
-                        <div class="meal-name">
-                            <h3>Potato Chips</h3>
-                        </div>
-
-                        <div class="meal-recipe">
-                            <a href="#" id="recipe-button" class="btn-recipe">Get Recipe</a>
-                        </div>
-                    </div>
-
-                    <!-- <div class="meal-item grid-item">
-                        <div class="meal-img">
-                            <img src="food.jpg" alt="Food Item">
-                        </div>
-
-                        <div class="meal-name">
-                            <h3>Potato Chips</h3>
-                        </div>
-
-                        <div class="meal-recipe">
-                            <a href="#" id="recipe-button" class="btn-recipe">Get Recipe</a>
-                        </div> -->
                 </div>
             </div>
         </div>
@@ -81,18 +56,18 @@
         <dialog class="meal-details modal" id="modal">
 
             <div class="recipe-title-close-btn-container flex modal-grid">
-                <h2 class="recipe-title">Potato Chips</h2>
+                <h2 id="modal-recipe-title" class="modal-recipe-title">Potato Chips</h2>
 
                 <button id="close-modal-button" class="btn btn-close-modal">
                     <i class="fas fa-times fa-xl"></i>
                 </button>
             </div>
 
-            <p class="recipe-category">
+            <p id="modal-recipe-category" class="modal-recipe-category">
                 Potato
             </p>
 
-            <div class="recipe-instructions">
+            <div id="modal-recipe-instructions" class="modal-recipe-instructions">
                 <h3>Instructions</h3>
 
                 <p>
@@ -103,19 +78,17 @@
                 </p>
             </div>
 
-            <div class="recipe-img">
+            <div id="modal-recipe-img" class="modal-recipe-img">
                 <img src="food.jpg" alt="">
             </div>
 
-            <a href="#" target="_blank" class="recipe-link">
+            <a href="#" target="_blank" id="modal-recipe-link" class="modal-recipe-link">
                 Watch Video
             </a>
         </dialog>
     </div>
-    </div>
-    </div>
 
-    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script src="app.js"></script>
 </body>
 

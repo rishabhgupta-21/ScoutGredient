@@ -154,6 +154,7 @@ body {
 }
 
 .meal-name {
+    padding: 0 0.2rem;
     margin: 0.9rem auto;
     font-size: 1.2rem;
 }
@@ -190,7 +191,7 @@ body {
     margin: auto;
     width: 55%;
     max-height: 90vh;
-    /* overflow-y: scroll; */
+    overflow-y: auto;
     border: 0;
     border-radius: 0.75em;
     box-shadow: 0 0 1em 0.3em rgb(0 0 0 / .3);
@@ -212,6 +213,10 @@ body {
     grid-template-columns: 93% 7%;
 }
 
+.grid-item {
+    overflow-y: auto;
+}
+
 .btn-close-modal {
     grid-row: 1/1;
     grid-column: 2/3;
@@ -230,7 +235,7 @@ body {
     background-color: rgba(255, 255, 255);
 }
 
-.recipe-title {
+.modal-recipe-title {
     grid-row: 1/1;
     grid-column: 1 / span 2;
 
@@ -240,7 +245,7 @@ body {
     letter-spacing: 0.08rem;
 }
 
-.recipe-category {
+.modal-recipe-category {
     width: fit-content;
     padding: 0.05em 0.5em;
     margin: 0.2rem auto;
@@ -251,12 +256,12 @@ body {
     border-radius: 0.25em;
 }
 
-.recipe-instructions {
+.modal-recipe-instructions {
     text-align: justify;
     margin: 1rem 0;
 }
 
-.recipe-instructions h3 {
+.modal-recipe-instructions h3 {
     font-size: 1.4rem;
     color: white;
     letter-spacing: 0.05rem;
@@ -264,7 +269,7 @@ body {
     text-underline-offset: 0.1em;
 }
 
-.recipe-instructions p {
+.modal-recipe-instructions p {
     color: white;
     font-size: 1.05rem;
     font-weight: 200;
@@ -272,7 +277,7 @@ body {
     margin: 0.3em 0 2em;
 }
 
-.recipe-img img {
+.modal-recipe-img img {
     display: block;
     margin: auto;
     width: 10em;
@@ -281,7 +286,7 @@ body {
     background-size: cover;
 }
 
-.recipe-link {
+.modal-recipe-link {
     display: block;
     text-align: center;
     margin: 1em 0 0.35em;
@@ -348,3 +353,10 @@ body {
         font-size: 1rem;
     }
 } */
+
+
+/* JS CLASSES */
+
+.hide {
+    display: none;
+}
