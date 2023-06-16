@@ -38,6 +38,37 @@ const changeModal = function (meal) {
 }
 
 
+const makeRecipeButtonFunctional = function (recipeButton, meal) {
+    recipeButton.innerText = 'Get Recipe';
+    recipeButton.classList.add('btn-recipe');
+    recipeButton.href = '#';
+
+    // Recipe Button event listener - shows Modal
+    // Makes API Call to diff Endpoint - search by meal name
+    recipeButton.addEventListener('click', async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${meal.strMeal}`);
+
+            for (let mealBySearch of response.data.meals) {
+                if (mealBySearch.strMeal === meal.strMeal) {
+                    changeModal(mealBySearch);
+                    break;
+                }
+            }
+
+            modal.showModal();
+        }
+        catch (err) {
+            console.error(err);
+            // SOME FUNCTION - prolly a Pop Over displaying problem message or error message
+        }
+    })
+
+    return recipeButton;
+}
+
 // Makes a 'card' for every result meal and places it in the grid
 const makeMealCard = function (meal) {
     // Meal Item (Card Container)
@@ -67,35 +98,9 @@ const makeMealCard = function (meal) {
     const newMealRecipe = document.createElement('div');
     newMealRecipe.classList.add('meal-recipe');
 
-    const newRecipeButton = document.createElement('a');
-    newRecipeButton.innerText = 'Get Recipe';
-    newRecipeButton.classList.add('btn-recipe');
-    newRecipeButton.href = '#';
-
-    // // Recipe Button event listener - shows Modal
-    // Make API Call to diff Endpoint - search by meal name
-
-    newRecipeButton.addEventListener('click', async (e) => {
-        e.preventDefault();
-
-        try {
-            const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${meal.strMeal}`);
-
-            for (let mealBySearch of response.data.meals) {
-                if (mealBySearch.strMeal === meal.strMeal) {
-                    changeModal(mealBySearch);
-                    break;
-                }
-            }
-
-            modal.showModal();
-        }
-        catch (err) {
-            console.error(err);
-            // SOME FUNCTION - prolly a Pop Over displaying problem message or error message
-        }
-    })
-
+    // Recipe Button
+    let newRecipeButton = document.createElement('a');
+    newRecipeButton = makeRecipeButtonFunctional(newRecipeButton, meal);
     newMealRecipe.append(newRecipeButton);
 
     // Put all these in Meal Item Container
